@@ -1,1 +1,44 @@
+// BAI 1
 
+let listBasket = [["orange", 1], ["grape", 2], ["apple", 3], ["watermelon", 4]];
+console.log( "I have " + listBasket[0][1] + " " + (listBasket[0][0]));
+
+
+// BAI 2
+
+
+// Kieu 1 
+
+for (i = 0 ; i < listBasket.length; i++) {
+  console.log(listBasket[i])
+}
+
+// Kieu 2
+
+for (let x in listBasket) {
+  console.log(listBasket[x]) 
+}
+
+// Kieu 3
+
+for (let z of listBasket) {
+  console.log(z)
+}
+
+
+// BAI 3
+
+var myDog = {
+    'names' : 'Ngáo',
+    'legs' : 4,
+    'friends' : ['everything!']
+}
+
+myDog.names = 'Husky',
+console.log(myDog.names)
+
+myDog.color = 'brown';
+console.log(myDog.color)
+
+delete myDog.friends;
+console.log(myDog)
