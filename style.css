@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.side-bar {
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+}
+
+
+
+.item {
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.side-bar-item {
+    color: white;
+
+}
+
+#mySidebar {
+    display: none;
+}
+
+.bar {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: green;
+    padding-left: 30px;
+    color: white;
+    text-decoration: none;
+}
