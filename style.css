@@ -1,41 +1,43 @@
-body {
-    margin: 0;
-    overflow: hidden;
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
-.side-bar {
-    height: 10vh;
-    width: 100vw;
-    background-color: black;
+.box {
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  color: black;
 }
 
-
-
-.item {
-    height: 100%;
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: right;
+.title {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
 }
 
-.side-bar-item {
-    color: white;
-
+.content {
+  height: 80%;
+  width: 68%;
+  margin-left: 95px;
 }
 
-#mySidebar {
-    display: none;
+#todolist {
+  height: 30px;
+  width: 366px;
 }
 
-.bar {
-    height: 10vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    background-color: green;
-    padding-left: 30px;
-    color: white;
-    text-decoration: none;
+label {
+  margin-top: 1px;
+  padding: 9.5px 14px;
+  background-color: brown;
+  border-radius: 10%;
 }

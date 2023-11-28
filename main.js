@@ -1,32 +1,29 @@
-function first() {
-    console.log("Hello there!")
+const taskElm = document.getElementById("todolist");
+const plusElm = document.getElementById("plus");
+
+function handleTodolist() {
+  if (taskElm.value === "") {
+    alert("Ban chua nhap task!");
+    return;
   }
-  
-
-  function second () {
-    console.log("How are you doing?")
+  const user = {
+    task: taskElm.value,
   }
-  
-
-  function last ()  {
-    console.log("I'm fine, thanks")
-  }
-  
-
-  setTimeout(first, 1000)
-  setTimeout(second, 2000)
-  setTimeout(last, 3000)
-
-
-
-// bai 2
-
-
-function toggleSidebar() {
-    if (document.getElementById('mySidebar').style.display === "block") {
-        document.getElementById('mySidebar').style.display = "none";
+  const usersLocal = localStorage.getItem("users");
+  if (usersLocal === null) {
+    const users = [user];
+    localStorage.setItem("users", JSON.stringify(users));
+  } else {
+    const users = JSON.parse(usersLocal);
+    for (let index = 0; index < users.length; index++) {
+      const element = users[index];
+      if (element.task === user.task) {
+        alert("Bi trung task!");
+        return;
+      }
     }
-    else {
-        document.getElementById('mySidebar').style.display = "block";
-    }
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+  }
 }
+plusElm.addEventListener("click", handleTodolist);
