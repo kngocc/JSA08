@@ -1,32 +1,57 @@
-function first() {
-    console.log("Hello there!")
-  }
-  
+const todoList = [
+  {
+    title: workElm.value,
+    completed: false,
+  },
+  {
+    title: "todo name",
+    completed: true,
+  },
+];
 
-  function second () {
-    console.log("How are you doing?")
-  }
-  
+const todolistForm = document.getElementById("todolistform");
+const inputElm = document.getElementById("todolist");
+const submitBtn = document.getElementById('work');
+const workElm = document.getElementById('specific');
 
-  function last ()  {
-    console.log("I'm fine, thanks")
-  }
-  
+function handleTodolist(e) {
+  e.preventDefault();
 
-  setTimeout(first, 1000)
-  setTimeout(second, 2000)
-  setTimeout(last, 3000)
+  const task = {
+    task: inputElm.value,
+  };
 
-
-
-// bai 2
-
-
-function toggleSidebar() {
-    if (document.getElementById('mySidebar').style.display === "block") {
-        document.getElementById('mySidebar').style.display = "none";
+  const usersLocal = localStorage.getItem("users");
+  if (usersLocal === null) {
+    const users = [task];
+    localStorage.setItem("users", JSON.stringify(users));
+  } else {
+    const users = JSON.parse(usersLocal);
+    for (let index = 0; index < users.length; index++) {
+      const element = users[index];
+      if (element.task === task.task) {
+        alert("Bi trung task!");
+        return;
+      }
     }
-    else {
-        document.getElementById('mySidebar').style.display = "block";
-    }
+    users.push(task);
+    localStorage.setItem("users", JSON.stringify(users));
+  }
 }
+
+for (let index = 0; index < submitBtn.length; index++) {
+    const product = todoList[index];
+    const h5Elm = document.createElement("h5");
+    h5Elm.textContent = product.title;
+    h5Elm.classList.add("card-title");
+    console.log(h5Elm);
+
+function handleList() {
+    workElm.value
+}
+
+
+
+
+todolistForm.addEventListener("submit", handleTodolist);
+submitBtn.addEventListener("click", handleList);

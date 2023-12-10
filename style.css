@@ -1,41 +1,56 @@
-body {
-    margin: 0;
-    overflow: hidden;
+.container {
+  width: 50vw;
+  height: 80vh;
+  background-color: #ff6666;
+  margin-left: 300px;
+  margin-top: 70px;
 }
 
-.side-bar {
-    height: 10vh;
-    width: 100vw;
-    background-color: black;
+.container-title {
+  height: 10%;
+  font-size: 30px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
 }
 
-
-
-.item {
-    height: 100%;
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: right;
+.container-todolist {
+  height: 90%;
+  width: 100%;
 }
 
-.side-bar-item {
-    color: white;
+.container-form {
+  display: flex;
+  justify-content: center;
+}
+
+#todolist {
+  height: 30px;
+  width: 300px;
+}
+
+#add {
+  height: 36px;
+  width: 50px;
+  background-color: transparent;
+  border-color: white;
+  border: solid 1px;
+}
+
+#workload {
+  height: 5%;
+  width: 100%;
+}
+
+.content-workload {
+  margin-top: 5%;
+  padding: 20px 0;
+  text-align: center;
+  border: solid 1px black;
+  background-color: #ff7776;
 
 }
 
-#mySidebar {
-    display: none;
-}
-
-.bar {
-    height: 10vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    background-color: green;
-    padding-left: 30px;
-    color: white;
-    text-decoration: none;
+#work {
+    text-decoration: line-through;
 }
